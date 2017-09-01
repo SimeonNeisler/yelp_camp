@@ -20,7 +20,7 @@ var indexRoutes = require("./routes/index"),
 var app = express();
 
 var url = process.env.databaseURL || "mongodb://localhost/yelpcamp"
-mongoose.connect(url);
+mongoose.connect("mongodb://yelpcampHeroku:En0f32$zxk@ds119014.mlab.com:19014/yelpcampneisler");
 
 
 
