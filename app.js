@@ -56,6 +56,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 var port = process.env.PORT || 3000;
-app.listen(port, process.env.IP, (req, res) => {
+app.listen(process.env.PORT, process.env.IP, (req, res) => {
   console.log("Server online");
 });
