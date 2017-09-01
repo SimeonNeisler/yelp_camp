@@ -19,8 +19,8 @@ var indexRoutes = require("./routes/index"),
 
 var app = express();
 
-var url = process.env.databaseURL || "mongodb://localhost/yelpcamp"
-mongoose.connect("mongodb://yelpcampHeroku:En0f32$zxk@ds119014.mlab.com:19014/yelpcampneisler");
+var url = process.env.DATABASEURL || "mongodb://localhost/yelpcamp"
+mongoose.connect(url);
 
 
 
@@ -56,6 +56,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 var port = process.env.PORT || 3000;
-app.listen(process.env.PORT, process.env.IP, (req, res) => {
+app.listen(port, process.env.IP, (req, res) => {
   console.log("Server online");
 });
